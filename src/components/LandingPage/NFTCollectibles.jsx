@@ -5,7 +5,6 @@ const FeaturedNFTs = () => {
   return (
     <section className="w-full py-12 px-6 md:px-12 lg:px-20">
       <div className="flex flex-col md:flex-row items-center justify-between">
-        {/* NFT Images */}
         <div className="relative flex-shrink-0 w-full md:w-1/2 flex justify-center md:justify-start">
             <img
               src={featured}
@@ -14,7 +13,6 @@ const FeaturedNFTs = () => {
             />
         </div>
 
-        {/* Text Content */}
         <div className="w-full md:w-2/3 text-center md:text-left mt-6 md:mt-0 md:p-20">
           <h3 className="text-xl md:text-2xl font-bold text-black">
             RESERVE AND SELL YOUR NFT EASILY

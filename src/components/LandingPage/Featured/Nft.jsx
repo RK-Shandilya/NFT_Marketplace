@@ -3,9 +3,7 @@ import React from "react";
 const NFTCard = ({ data }) => {
   return (
     <div className="p-5 w-full max-w-lg">
-      {/* Image & Thumbnails */}
       <div className="flex gap-4">
-        {/* Large Image */}
         <div className="w-3/4">
           <img
             src={data[0]}

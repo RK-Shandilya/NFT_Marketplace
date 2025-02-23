@@ -30,28 +30,24 @@ const DiscoverNFTs = () => {
     { id: "133737", price: "228 USDT", img: nft8 },
   ];
 
-  // Handle Category Click (acts as Next/Prev)
+
   const handleCategoryClick = (index) => {
     setDirection(index > currentIndex ? 1 : -1);
     setCurrentIndex(index);
   };
 
   return (
-    <div className="max-w-7xl mx-auto p-8 px-14">
-      {/* Header Section */}
-      <div className="flex flex-col justify-between items-start mb-8 gap-8">
-        <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-0">
-          DISCOVER MORE NFTS
-        </h1>
+    <div className="max-w-7xl mx-auto p-4 sm:p-6 md:p-8 lg:p-10 xl:p-14">
+      <div className="flex flex-col sm:flex-row justify-between items-start mb-6 sm:mb-8 gap-4 sm:gap-8">
+        <h1 className="text-2xl sm:text-3xl font-bold">DISCOVER MORE NFTS</h1>
 
-        {/* Category Buttons */}
-        <div className="flex justify-between w-full">
-          <div className="flex space-x-4">
+        <div className="flex flex-col sm:flex-row justify-between w-full sm:w-auto gap-4 sm:gap-6">
+          <div className="flex flex-wrap gap-2 sm:gap-4">
             {categories.map((category, index) => (
               <button
                 key={category}
                 onClick={() => handleCategoryClick(index)}
-                className={`px-4 py-2 rounded-full text-sm ${
+                className={`px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm ${
                   currentIndex === index
                     ? "bg-blue-500 text-white"
                     : "bg-gray-100"
@@ -61,13 +57,12 @@ const DiscoverNFTs = () => {
               </button>
             ))}
           </div>
-          <button className="px-4 py-2 rounded-full text-sm bg-gray-100 hover:bg-gray-200 transition-all">
+          <button className="px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm bg-gray-100 hover:bg-gray-200 transition-all">
             All Filters
           </button>
         </div>
       </div>
 
-      {/* NFT Display with Animation */}
       <div className="relative overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
@@ -76,34 +71,38 @@ const DiscoverNFTs = () => {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -direction * 100, opacity: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"
           >
             {nfts.map((nft) => (
               <motion.div
                 key={nft.id}
-                className="bg-white rounded-3xl p-3 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white rounded-2xl sm:rounded-3xl p-2 sm:p-3 shadow-sm hover:shadow-md transition-shadow"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="relative aspect-square mb-4">
+                <div className="relative aspect-square mb-2 sm:mb-4">
                   <img
                     src={nft.img}
                     alt={`NFT ${nft.id}`}
-                    className="w-full h-full object-cover rounded-2xl"
+                    className="w-full h-full object-cover rounded-xl sm:rounded-2xl"
                   />
                   <img
                     src={stake}
                     alt="Stake logo"
-                    className="absolute bottom-1 left-3 w-10 h-10 rounded-2xl"
+                    className="absolute bottom-1 left-2 sm:left-3 w-8 sm:w-10 h-8 sm:h-10 rounded-xl sm:rounded-2xl"
                   />
                 </div>
 
-                <div className="px-2">
-                  <h3 className="text-lg font-semibold mb-2">NFT_{nft.id}</h3>
-                  <div className="flex items-center space-x-2">
-                    <img src={sign} alt="Token" className="w-5 h-5" />
-                    <span className="text-gray-600">{nft.price}</span>
+                <div className="px-1 sm:px-2">
+                  <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2">
+                    NFT_{nft.id}
+                  </h3>
+                  <div className="flex items-center space-x-1 sm:space-x-2">
+                    <img src={sign} alt="Token" className="w-4 sm:w-5 h-4 sm:h-5" />
+                    <span className="text-sm sm:text-base text-gray-600">
+                      {nft.price}
+                    </span>
                   </div>
                 </div>
               </motion.div>
@@ -111,8 +110,11 @@ const DiscoverNFTs = () => {
           </motion.div>
         </AnimatePresence>
       </div>
-      <div className="w-full mt-8 flex justify-center">
-        <button className=" p-3 px-6 rounded-full bg-linear-90 from-[rgba(153,188,255)] via-[rgba(153,255,250)] to-[rgba(255,214,199)] text-sm md:text-base font-semibold text-black">Discover More</button>
+
+      <div className="w-full mt-6 sm:mt-8 flex justify-center">
+        <button className="p-2 sm:p-3 px-4 sm:px-6 rounded-full bg-gradient-to-r from-[rgba(153,188,255)] via-[rgba(153,255,250)] to-[rgba(255,214,199)] text-xs sm:text-sm md:text-base font-semibold text-black hover:opacity-90 transition-opacity">
+          Discover More
+        </button>
       </div>
     </div>
   );
