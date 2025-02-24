@@ -59,13 +59,13 @@ const NFTMarketplace = () => {
   ];
 
   return (
-    <div className="container mx-auto p-10">
-      <div className="grid grid-cols-12 gap-3">
+    <div className="container mx-auto p-4 sm:p-6 md:p-10">
+      <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 sm:gap-6">
         {/* Main NFT Display */}
-        <div className="col-span-5">
-          <div className="flex flex-col gap-4 rounded-3xl p-4">
+        <div className="sm:col-span-12 md:col-span-5">
+          <div className="flex flex-col gap-4 rounded-3xl p-4 bg-white shadow-lg">
             <img src={nft1} alt="PEPE Frog" className="w-full rounded-3xl" />
-            <div className="flex justify-between gap-4">
+            <div className="flex flex-col sm:flex-row justify-between gap-4">
               <div className="flex items-center gap-2">
                 <img
                   src={nft1}
@@ -77,9 +77,9 @@ const NFTMarketplace = () => {
                 </span>
               </div>
 
-              <div className="flex flex-col gap-1 items-end rounded-full">
+              <div className="flex flex-col gap-1 items-end">
                 <div className="text-xs font-light">Highest bid</div>
-                <div className="ml-1 text-sm flex items-center gap-1">
+                <div className="text-sm flex items-center gap-1">
                   <img src={sign} alt="Token" className="w-4 h-4" />
                   <div className="text-sm text-gray-500">228.57K USDT</div>
                 </div>
@@ -89,22 +89,33 @@ const NFTMarketplace = () => {
         </div>
 
         {/* Related NFTs */}
-        <div className="col-span-4 space-y-4">
+        <div className="sm:col-span-12 md:col-span-4 space-y-4">
           {relatedNFTs.map((nft) => (
-            <div key={nft.id} className="flex items-start gap-2 rounded-2xl p-4">
+            <div
+              key={nft.id}
+              className="flex items-start gap-4 rounded-2xl p-4 bg-white shadow-lg"
+            >
               <img
                 src={nft.img}
                 alt={`PEPE ${nft.id}`}
-                className="w-38 h-38 rounded-xl"
+                className="w-24 h-24 sm:w-32 sm:h-32 rounded-xl"
               />
-              <div className="mt-3 flex flex-col items-start gap-2 ">
-                <span className="font-semibold text-sm">PEPE_Frog_Nobility_{nft.id}</span>
-                <div className="flex items-center rounded-full px-2 py-0.5  gap-2">
-                  <img src={nft.img} alt="Token" className="w-6 h-6 rounded-full" />
-                  <div className="border-emerald-500 flex items-center border-2 px-1 py-0.5 rounded-2xl">
+              <div className="flex flex-col items-start gap-2">
+                <span className="font-semibold text-sm">
+                  PEPE_Frog_Nobility_{nft.id}
+                </span>
+                <div className="flex items-center gap-2">
+                  <img
+                    src={nft.img}
+                    alt="Token"
+                    className="w-6 h-6 rounded-full"
+                  />
+                  <div className="border-emerald-500 flex items-center border-2 px-2 py-1 rounded-2xl">
                     <img src={sign} alt="Token" className="w-4 h-4" />
-                    <span className="ml-1 text-xs font-light text-emerald-500">{nft.price}</span>
-                </div>
+                    <span className="ml-1 text-xs font-light text-emerald-500">
+                      {nft.price}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -112,16 +123,16 @@ const NFTMarketplace = () => {
         </div>
 
         {/* Collections List */}
-        <div className="col-span-3 border-l-2 border-gray-100 p-4">
+        <div className="sm:col-span-12 md:col-span-3 border-l-0 md:border-l-2 border-gray-100 p-4">
           <div className="flex flex-col mb-6">
             <div>
               <h2 className="text-lg font-bold">TOP COLLECTIONS OVER</h2>
               <p className="text-gray-400 text-sm">Last 24 Hours</p>
             </div>
             <div className="flex justify-end">
-                <button className="w-fit text-blue-400 border border-blue-400 rounded-full px-4 py-1">
+              <button className="w-fit text-blue-400 border border-blue-400 rounded-full px-4 py-1">
                 More
-                </button>
+              </button>
             </div>
           </div>
 
@@ -132,12 +143,12 @@ const NFTMarketplace = () => {
                 className="flex items-center justify-between border-b-2 border-gray-100 py-2 gap-2"
               >
                 <div className="flex items-center gap-2">
-                    <span className="font-bold text-lg w-6">{index + 1}</span>
-                    <img
+                  <span className="font-bold text-lg w-6">{index + 1}</span>
+                  <img
                     src={collection.img}
                     alt={collection.name}
                     className="w-14 h-14 rounded-full"
-                    />
+                  />
                 </div>
                 <div className="flex flex-col items-start gap-2">
                   <p className="font-semibold text-sm">{collection.name}</p>

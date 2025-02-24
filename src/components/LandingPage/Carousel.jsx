@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { banner1, banner2, banner3 } from "../../assets/landingPage";
+import { banner1, banner2, banner3 } from "../../assets/landingPage/index.js";
 import { TiChevronLeftOutline, TiChevronRightOutline, TiChevronLeft, TiChevronRight } from "react-icons/ti";
 
 const StakingNFTCarousel = () => {
@@ -62,23 +62,23 @@ const StakingNFTCarousel = () => {
       </div>
     ),
     customPaging: (i) => (
-      <div className={`w-6 h-6 border rounded-full transition-colors ${i === currentSlide ? 'bg-blue-400' : 'bg-white'}`}></div>
+      <div className={`w-4 h-4 md:w-6 md:h-6 border rounded-full transition-colors ${i === currentSlide ? 'bg-blue-400' : 'bg-white'}`}></div>
     ),
   };
 
   return (
-    <div className="mt-14 md:block hidden">
+    <div className="mt-14">
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="relative">
-          <Slider ref={sliderRef} {...settings} className="h-[78vh]">
+          <Slider ref={sliderRef} {...settings} className="h-[40vh] sm:h-[50vh] md:h-[78vh]">
             {images.map((src) => (
               <div key={src.id} className="outline-none">
-                <div className="rounded-3xl overflow-hidden p-8">
+                <div className="rounded-3xl overflow-hidden p-4 sm:p-8">
                   <div className="max-w-5xl mx-auto">
                     <img 
                       src={src.img} 
                       alt={src.alt}
-                      className="w-full h-[84vh] rounded-4xl object-cover"
+                      className="w-full h-[30vh] sm:h-[40vh] md:h-[84vh] rounded-4xl object-cover"
                     />
                   </div>
                 </div>
@@ -87,36 +87,36 @@ const StakingNFTCarousel = () => {
           </Slider>
 
           <button
-            className={`absolute left-3 border border-gray-300 top-1/2 -translate-y-1/2 w-18 h-18 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${
-              isLastSlide 
-                ? "bg-gray-200" 
+            className={`absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-18 sm:h-18 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${
+              isFirstSlide 
+                ? "bg-gray-200 border border-gray-300" 
                 : leftClicked 
-                  ? "bg-gray-200" 
-                  : "bg-white"
+                  ? "bg-gray-200 border border-gray-300" 
+                  : "bg-white border border-gray-300"
             }`}
             onClick={handleLeftClick}
           >
             {
-                isFirstSlide 
-                  ? <TiChevronLeftOutline className="text-gray-300" size={40} />
-                  : <TiChevronLeft className="text-black" size={40} /> 
+              isFirstSlide 
+                ? <TiChevronLeftOutline className="text-gray-300" size={24} />
+                : <TiChevronLeft className="text-black" size={24} /> 
             }
           </button>
 
           <button
-            className={`absolute right-2 top-1/2 border border-gray-300 -translate-y-1/2 w-18 h-18 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${
-              isFirstSlide 
-                ? "bg-gray-200" 
+            className={`absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-18 sm:h-18 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${
+              isLastSlide 
+                ? "bg-gray-200 border border-gray-300" 
                 : rightClicked 
-                  ? "bg-gray-200" 
-                  : "bg-white"
+                  ? "bg-gray-200 border border-gray-300" 
+                  : "bg-white border border-gray-300"
             }`}
             onClick={handleRightClick}
           >
             {
               isLastSlide 
-                ? <TiChevronRightOutline className="text-gray-300" size={40} />
-                : <TiChevronRight className="text-black" size={40} /> 
+                ? <TiChevronRightOutline className="text-gray-300" size={24} />
+                : <TiChevronRight className="text-black" size={24} /> 
             }
           </button>
         </div>

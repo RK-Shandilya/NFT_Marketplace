@@ -6,7 +6,7 @@ const VideoSection = () => {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end center"], // Triggers only when scrolling up
+    offset: ["start end", "end center"],
   });
 
   const smoothProgress = useSpring(scrollYProgress, {
@@ -15,12 +15,14 @@ const VideoSection = () => {
     restDelta: 0.001,
   });
 
-  // Zoom-in effect applied only when scrolling up
-  const scale = useTransform(smoothProgress, [0, 1], [0.8, 1]); // Starts zoomed out and zooms in
-  const opacity = useTransform(smoothProgress, [0, 0.5, 1], [0, 1, 1]); // Fades in smoothly
+  const scale = useTransform(smoothProgress, [0, 1], [0.8, 1]); 
+  const opacity = useTransform(smoothProgress, [0, 0.5, 1], [0, 1, 1]);
 
   return (
-    <div ref={containerRef} className="relative min-h-[100vh] flex items-center justify-center py-[10vw]">
+    <div
+      ref={containerRef}
+      className="relative min-h-[100vh] flex items-center justify-center py-[5vw] sm:py-[10vw]"
+    >
       <motion.div
         style={{
           scale,
@@ -35,7 +37,7 @@ const VideoSection = () => {
           controls
           playsInline
           preload="none"
-          className="index-video w-full max-w-5xl mx-auto rounded-lg shadow-lg"
+          className="index-video w-full max-w-[90vw] sm:max-w-4xl md:max-w-5xl mx-auto rounded-lg shadow-lg"
         />
       </motion.div>
     </div>
