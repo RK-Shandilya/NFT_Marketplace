@@ -26,3 +26,7 @@
   border-bottom-width: 4px;
   border-image: linear-gradient(90deg, rgba(153,188,237), rgba(153,248,207), rgba(255,214,199)) 1;
 }
+
+*{
+  box-sizing: border-box;
+}
