@@ -18,7 +18,7 @@ const FeaturedNFTs = () => {
             RESERVE AND SELL YOUR NFT EASILY
           </h3>
           <p className="text-gray-500 text-sm md:text-base mt-2">
-            Earning income in TreasureNFT is simple: just RESERVE and then
+            Earning income in JEONFT is simple: just RESERVE and then
             TRADE to EARN
           </p>
           <button className="mt-4 px-6 py-2 rounded-full bg-linear-90 from-[rgba(153,188,255)] via-[rgba(153,255,250)] to-[rgba(255,214,199)] text-sm md:text-base font-semibold text-white">

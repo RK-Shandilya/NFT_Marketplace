@@ -10,11 +10,11 @@ const Footer = () => {
             <div className="flex items-center gap-2">
               <div className="h-8 w-8 bg-gradient-to-br from-blue-400 to-green-300 rounded-lg" />
               <span className="text-xl font-semibold">
-                Treasure <span className="text-gray-500">NFT</span>
+                JEO <span className="text-gray-500">NFT</span>
               </span>
             </div>
             <p className="mt-2 text-gray-600 text-sm">
-              TreasureNFT is a Web3 revenue platform based on NFT collections
+              JEONFT is a Web3 revenue platform based on NFT collections
             </p>
           </div>
 
@@ -75,7 +75,7 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="mt-12 text-center text-gray-400 text-xs font-semibold">
-          <p>© 2023 - TreasureMeta Technology, Inc</p>
+          <p>© 2023 - JEOMeta Technology, Inc</p>
           <div className="mt-1">
             <span className="mx-3">Privacy Policy</span>
             <span className="mx-3">Terms of service</span>
