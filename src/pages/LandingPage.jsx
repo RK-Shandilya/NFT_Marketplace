@@ -29,7 +29,7 @@ const LandingPage = () => {
             <div className="flex flex-col gap-2">
               <div className="text-lg font-semibold">Multi-Reward</div>
               <div className="text-sm">
-                TreasureNFT leverages a proprietary AI-powered algorithmic
+                JEONFT leverages a proprietary AI-powered algorithmic
                 trading model, and provides a dual earnings mechanism with
                 trading rewards as well as referral rewards.
               </div>
@@ -44,7 +44,7 @@ const LandingPage = () => {
             <div className="flex flex-col gap-2">
               <div className="text-lg font-semibold">Earn Future Value</div>
               <div className="text-sm">
-                TreasureNFT reduces the entry hurdles of the NFT market and
+                JEONFT reduces the entry hurdles of the NFT market and
                 expands the boundaries of the NFT collection & trading through
                 its innovative AI algorithmic trading process and rewarding
                 financial model.
