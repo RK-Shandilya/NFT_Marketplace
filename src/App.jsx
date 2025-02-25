@@ -8,8 +8,11 @@ import Announcements from './pages/Announcement'
 import LevelUpReward from './pages/Rewards'
 import Earn from './pages/Earn'
 import DepositNFT from './pages/DepositNFT'
-import Dashboard from './pages/Reserve'
+import Reserve from './pages/Reserve'
 import AnnouncementDetail from './pages/AnnouncementDetail'
+import Dashboard from './pages/Dashboard'
+import Message from './pages/Message'
+import Wallet from './pages/Wallet'
 
 function App() {
 
@@ -25,7 +28,10 @@ function App() {
         <Route path='/collection' element={<Earn />} />
         <Route path="/rewards" element={<LevelUpReward />} />
         <Route path='/depositNFT' element={<DepositNFT />} />
-        <Route path='/store/defi' element={<Dashboard/>}/>
+        <Route path='/store/defi' element={<Reserve/>}/>
+        <Route path='/user' element={<Dashboard/>}/>
+        <Route path='/message' element={<Message/>}/>
+        <Route path='/wallet' element={<Wallet/>}></Route>
       </Routes>
     </Router>
   )
