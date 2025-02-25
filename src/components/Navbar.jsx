@@ -29,7 +29,7 @@ const Navbar = () => {
           : "bg-transparent"
       }`}>
       <div className="flex justify-between items-center px-4 md:px-6 py-4">
-        <div>
+        <div onClick={()=> navigate('/')}>
           <img src={logo} alt="Logo" className="w-24 bg-gray-950 rounded-2xl" />
         </div>
 
@@ -86,7 +86,7 @@ const Navbar = () => {
             {dropdownOpen && (
               <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg">
                 <div className="p-2 space-y-2">
-                  <button className="flex items-center gap-2 p-2 hover:bg-gray-100 w-full">
+                  <button className="flex items-center gap-2 p-2 hover:bg-gray-100 w-full cursor-pointer">
                     <Headset className="w-6" />
                     Service
                   </button>

@@ -178,7 +178,7 @@ const Explore = () => {
 
               {/* Placeholder for Other Tabs */}
               {activeTab === "Polygon NFT" && (
-                <div className="my-8 flex flex-wrap gap-4 text-center text-gray-500">
+                <div className="my-8 flex flex-wrap gap-2 text-center text-gray-500">
                   {polygonNFTData.map((nft) => (
                     <PolygonNftCard key={nft.id} data={nft} />
                   ))}

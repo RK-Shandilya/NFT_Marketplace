@@ -4,7 +4,7 @@ import { bg } from '../assets/Explore';
 import { Eye, EyeOff } from 'lucide-react'; // Import eye icons
 
 const Dashboard = () => {
-  const [showUID, setShowUID] = useState(false); // State to toggle UID visibility
+  const [showDetails, setShowDetails] = useState(false); // State to toggle ID and UID visibility
 
   return (
     <Layout style={{ backgroundImage: `url(${bg})` }}>
@@ -16,16 +16,21 @@ const Dashboard = () => {
             <div className="w-full md:w-2/5 p-4 md:p-6 flex flex-col items-center justify-center border-r border-gray-100">
               <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-to-br from-blue-200 via-purple-200 to-green-200 mb-4"></div>
 
-              {/* UID and ID with Eye Icon */}
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => setShowUID(!showUID)}
-                  className="text-gray-600 hover:text-gray-800"
-                >
-                  {showUID ? <Eye size={18} /> : <EyeOff size={18} />}
-                </button>
-                <div className="text-gray-800">
-                  {showUID ? 'UID: 123456789' : '************'}
+              {/* ID and UID with Eye Icon */}
+              <div className="flex flex-col items-center gap-2">
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => setShowDetails(!showDetails)}
+                    className="text-gray-600 hover:text-gray-800"
+                  >
+                    {showDetails ? <Eye size={18} /> : <EyeOff size={18} />}
+                  </button>
+                  <div className="text-gray-800">
+                    {showDetails ? 'ID: 987654321' : '************'}
+                  </div>
+                </div>
+                <div className="text-gray-600">
+                  {showDetails ? 'UID: 123456789' : '************'}
                 </div>
               </div>
 
