@@ -25,7 +25,7 @@ const data = [
   { date: "02/23", usdt: 40000000 },
 ];
 
-const Dashboard = () => {
+const Reserve = () => {
     const [isOpen, setIsOpen] = useState(true);
 
   return (
@@ -130,4 +130,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Reserve;

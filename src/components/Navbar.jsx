@@ -90,15 +90,21 @@ const Navbar = () => {
                     <Headset className="w-6" />
                     Service
                   </button>
-                  <button className="flex items-center gap-2 p-2 hover:bg-gray-100 w-full">
+                  <button className="flex items-center gap-2 p-2 hover:bg-gray-100 w-full cursor-pointer"
+                  onClick={() => navigate('/user')}
+                  >
                     <img src={account} alt="Account" className="w-6" />
                     Account
                   </button>
-                  <button className="flex items-center gap-2 p-2 hover:bg-gray-100 w-full">
+                  <button className="flex items-center gap-2 p-2 hover:bg-gray-100 w-full cursor-pointer"
+                  onClick={()=> navigate('/wallet')}
+                  >
                     <Wallet className="w-6" />
                     Wallet
                   </button>
-                  <button className="flex items-center gap-2 p-2 hover:bg-gray-100 w-full">
+                  <button className="flex items-center gap-2 p-2 hover:bg-gray-100 w-full cursor-pointer"
+                  onClick={()=> navigate('/message')}
+                  >
                     <Mail className="w-6" />
                     Message
                   </button>
