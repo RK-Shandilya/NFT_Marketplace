@@ -45,7 +45,7 @@ const Explore = () => {
     <Layout style={{ backgroundImage: `url(${bg})` }}>
       <div className="mx-auto bg-cover bg-center bg-no-repeat">
         {/* Header */}
-        <h1 className="text-2xl lg:text-3xl font-semibold mb-4 px-4 lg:px-16 pt-8 lg:pt-30">
+        <h1 className="text-2xl lg:text-3xl font-semibold mb-4 px-16 pt-30">
           Explore
         </h1>
 
