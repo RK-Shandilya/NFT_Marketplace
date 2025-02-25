@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '/NFT_logo.png';
 import { AlignJustify, Bell, FileKey, Headset, Mail, Wallet, Search } from 'lucide-react';
 import { earn, tg, lang, account } from '../assets/landingPage/navbar';
@@ -7,11 +7,27 @@ import { useNavigate } from 'react-router-dom';
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollThreshold = 1;
+      setIsScrolled(window.scrollY > scrollThreshold);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navigate = useNavigate();
 
   return (
-    <nav className="w-full fixed top-0 z-50 bg-transparent bg-opacity-90 backdrop-blur-sm">
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled
+          ? "backdrop-blur-md bg-white/70 shadow-md"
+          : "bg-transparent"
+      }`}>
       <div className="flex justify-between items-center px-4 md:px-6 py-4">
         <div>
           <img src={logo} alt="Logo" className="w-24 bg-gray-950 rounded-2xl" />
@@ -30,8 +46,12 @@ const Navbar = () => {
           } md:flex md:items-center md:gap-6 absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none p-4 md:p-0`}
         >
           <div className="font-semibold cursor-pointer hover:opacity-80 mb-4 md:mb-0" onClick={()=> navigate('/explore')}>Explore</div>
-          <div className="font-semibold cursor-pointer hover:opacity-80 mb-4 md:mb-0">Earn</div>
-          <div className="font-semibold cursor-pointer hover:opacity-80 mb-4 md:mb-0">Reserve</div>
+          <div className="font-semibold cursor-pointer hover:opacity-80 mb-4 md:mb-0"
+          onClick={()=> navigate('/collection')}
+          >Earn</div>
+          <div className="font-semibold cursor-pointer hover:opacity-80 mb-4 md:mb-0"
+          onClick={()=> navigate('/store/defi')}
+          >Reserve</div>
           <div className="relative w-full md:w-auto">
             <div className="relative">
               <input
@@ -46,11 +66,15 @@ const Navbar = () => {
 
         {/* Right Section - Icons & Menu */}
         <div className="hidden md:flex items-center gap-6">
-          <div className="relative cursor-pointer">
+          <div className="relative cursor-pointer"
+          onClick={() => navigate('/announcements')}
+          >
             <Bell className="w-6 h-6" />
             <span className="absolute top-0 right-0 bg-red-500 w-2 h-2 rounded-full"></span>
           </div>
-          <div className="text-lg font-semibold cursor-pointer hover:opacity-80">Airdrop</div>
+          <div className="text-lg font-semibold cursor-pointer hover:opacity-80"
+          onClick={() => navigate('/rewards')}
+          >Airdrop</div>
           <button><img src={earn} alt="Earn" className="w-7" /></button>
           <button><img src={tg} alt="Telegram" className="w-7" /></button>
           <button><img src={lang} alt="Language" className="w-7" /></button>
