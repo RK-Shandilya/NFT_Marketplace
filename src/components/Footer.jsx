@@ -92,16 +92,18 @@ const Footer = () => {
           <span>Help</span>
         </span>
       </button>
-      <div className='fixed md:hidden bottom-10 left-3 bg-gray-100 rounded-4xl shadow-2xl shadow-black mx-auto'>
-          <div className='flex text-gray-400 font-light gap-4 items-center justify-between text-md p-3 px-6  w-full'>
-            <div className=' cursor-pointer'>Stake</div>
-            <div className='border-l border-gray-400 pl-3 cursor-pointer'
+      
+      {/* Mobile Navigation Bar - Centered */}
+      <div className='fixed md:hidden bottom-10 left-0 right-0 mx-auto w-full max-w-md px-2'>
+          <div className='flex flex-wrap text-gray-400 font-light items-center justify-between text-lg p-3 bg-gray-100 rounded-full shadow-2xl shadow-black'>
+            <div className=' pl-2 cursor-pointer'>Stake</div>
+            <div className='px-3 border-r border-l border-gray-400 cursor-pointer'
             onClick={()=> navigate('/collection')}>Earn</div>
-            <div className='border-l border-gray-400 pl-3 cursor-pointer'
+            <div className=' cursor-pointer'
             onClick={()=> navigate('/store/defi')}>Reserve</div>
-            <div className='border-l border-gray-400 pl-3 cursor-pointer'
+            <div className='px-3 border-r border-l border-gray-400 cursor-pointer'
             onClick={()=> navigate('/rewards')}>Assets</div>
-            <div className='border-l border-gray-400 pl-3 cursor-pointer'
+            <div className='pr-2 cursor-pointer'
             onClick={()=> navigate('/user')}>My</div>
           </div>
       </div>
