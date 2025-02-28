@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Carousel from "../components/LandingPage/Carousel";
 import { LuCalendarCheck2 } from "react-icons/lu";
 import { TiChartBarOutline } from "react-icons/ti";
@@ -8,11 +8,22 @@ import NFTCollectibles from "../components/LandingPage/NFTCollectibles";
 import DiscoverNFTs from "../components/LandingPage/DiscoverNFT";
 import VideoSection from "../components/LandingPage/VideoSection";
 import FeaturedNFT from "../components/LandingPage/FeaturedNFT";
+import TreasureNFTLoginModal from "./Login"; // Fixed import path
 
 const LandingPage = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Show login modal on page load
+  useEffect(() => {
+    setIsModalOpen(true);
+  }, []);
+
   return (
     <Layout style={{ background: "white" }}>
       <div className="mx-auto">
+        {/* Login Modal */}
+        {isModalOpen && <TreasureNFTLoginModal onClose={() => setIsModalOpen(false)} />}
+
         <Carousel />
         <div className="flex flex-col md:flex-row justify-between gap-8 p-8 md:p-18 bg-gradient-to-r from-[rgba(153,188,237,.2)] via-[rgba(153,248,207,.5)] to-[rgba(255,214,199,.5)] mt-24 text-center">
           {/* Main Heading */}
@@ -52,6 +63,17 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
+
+        {/* Login Button for manual login */}
+        <div className="flex justify-center mt-8">
+          <button
+            className="px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-600"
+            onClick={() => setIsModalOpen(true)}
+          >
+            Log In
+          </button>
+        </div>
+
         <NFTMarketplace />
         <FeaturedNFT />
         <NFTCollectibles />
