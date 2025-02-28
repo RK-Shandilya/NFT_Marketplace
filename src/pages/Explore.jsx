@@ -112,7 +112,7 @@ const Explore = () => {
                   <span
                     className={`p-2 cursor-pointer whitespace-nowrap ${
                       activeSubTab === "Collection"
-                        ? "text-black font-semibold border-b-2 border-b-3 border-blue-900"
+                        ? "text-black font-semibold  border-b-3 border-blue-900"
                         : ""
                     }`}
                     onClick={() => handleSubTabClick("Collection")}
@@ -122,7 +122,7 @@ const Explore = () => {
                   <span
                     className={`p-2 cursor-pointer whitespace-nowrap ${
                       activeSubTab === "My Stake"
-                        ? "text-black font-semibold border-b-2 border-b-3 border-blue-900"
+                        ? "text-black font-semibold border-b-3 border-blue-900"
                         : ""
                     }`}
                     onClick={() => handleSubTabClick("My Stake")}
