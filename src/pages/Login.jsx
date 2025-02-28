@@ -1,21 +1,29 @@
 import React, { useState } from "react";
 import { bg } from "../assets/Explore";
-import NFT from '/NFT.jpeg'
+import NFT from "/NFT.jpeg";
 
-const TreasureNFTLoginModal = () => {
+const TreasureNFTLoginModal = ({ onClose }) => {
   const [showPassword, setShowPassword] = useState(false);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleConfirm = () => {
+    console.log("Username:", username);
+    console.log("Password:", password);
+    alert("Login Confirmed!");
+  };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black/30">
+    <div className="fixed inset-0 flex items-center justify-center bg-black/30 z-100">
       <div className="bg-white rounded-2xl shadow-lg w-full max-w-md mx-4">
         <div
           className="flex flex-col items-center mb-8 rounded-t-2xl bg-cover bg-center bg-no-repeat pb-8"
           style={{ backgroundImage: `url(${bg})` }}
         >
-          <div className="w-28 h-28 flex items-center justify-center mb-4 ">
+          <div className="w-28 h-28 flex items-center justify-center mb-4">
             <div className="relative">
               <div className="relative flex items-center justify-center p-2">
-                <img src={NFT} alt="" className="rounded-2xl"/>
+                <img src={NFT} alt="" className="rounded-2xl" />
               </div>
             </div>
           </div>
@@ -28,9 +36,12 @@ const TreasureNFTLoginModal = () => {
         <div className="p-6">
           <h1 className="text-2xl font-bold text-center mb-6">Log in</h1>
 
-          <div className="mb-6 ">
-            <button className="w-full border-2 border-cyan-400 rounded-lg p-3 flex items-center justify-center text-gray-600 hover:bg-gray-50">
-              Wallet Connect  &gt;
+          <div className="mb-6">
+            <button
+              className="w-full border-2 border-cyan-400 rounded-lg p-3 flex items-center justify-center text-gray-600 hover:bg-gray-50"
+              onClick={() => alert("Wallet Connect clicked!")}
+            >
+              Wallet Connect &gt;
             </button>
           </div>
 
@@ -41,6 +52,8 @@ const TreasureNFTLoginModal = () => {
             <input
               type="text"
               placeholder="User name"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
             />
           </div>
@@ -53,11 +66,14 @@ const TreasureNFTLoginModal = () => {
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
               />
               <button
                 onClick={() => setShowPassword(!showPassword)}
                 className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400"
+                type="button"
               >
                 <svg
                   className="h-5 w-5"
@@ -81,23 +97,37 @@ const TreasureNFTLoginModal = () => {
           </div>
 
           <div className="flex justify-end mb-6">
-            <button className="text-blue-400 text-sm hover:underline">
+            <button
+              className="text-blue-400 text-sm hover:underline"
+              onClick={() => alert("Forgot Password clicked!")}
+            >
               Forgot Password?
             </button>
           </div>
 
           <div className="flex gap-4 mb-4">
-            <button className="w-1/2 border border-gray-300 rounded-lg py-2 text-gray-700 hover:bg-gray-50">
+            <button
+              className="w-1/2 border border-gray-300 rounded-lg py-2 text-gray-700 hover:bg-gray-50"
+              onClick={onClose}
+            >
               Cancel
             </button>
-            <button className="w-1/2 bg-gradient-to-r from-blue-300 to-cyan-300 rounded-lg py-2 text-white font-medium hover:opacity-90">
+            <button
+              className="w-1/2 bg-gradient-to-r from-blue-300 to-cyan-300 rounded-lg py-2 text-white font-medium hover:opacity-90"
+              onClick={handleConfirm}
+            >
               Confirm
             </button>
           </div>
 
           <div className="text-center">
             <span className="text-gray-600">Don't have an account? </span>
-            <button className="text-blue-400 hover:underline">Sign up</button>
+            <button
+              className="text-blue-400 hover:underline"
+              onClick={() => alert("Sign up clicked!")}
+            >
+              Sign up
+            </button>
           </div>
         </div>
       </div>
