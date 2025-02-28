@@ -4,11 +4,11 @@ import { bg } from "../assets/Explore";
 
 const Message = () => {
   return (
-    <Layout style={{ backgroundImage: `url(${bg})` }}>
+    <Layout >
       <h1 className="text-2xl lg:text-3xl font-semibold mb-4 px-16 pt-30">
         Message
       </h1>
-      <div className="w-full min-h-screen p-4 bg-white">
+      <div className="w-full min-h-screen p-4 bg-white text-black">
         <div className="max-w-6xl mx-auto bg-white p-4 md:p-6 shadow-md rounded-lg">
           <div className="flex flex-col md:flex-row mt-4">
             {/* Sidebar */}

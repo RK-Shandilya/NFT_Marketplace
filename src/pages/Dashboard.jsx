@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import Layout from '../Layout';
 import { bg } from '../assets/Explore';
-import { Eye, EyeOff } from 'lucide-react'; // Import eye icons
+import { Eye, EyeOff } from 'lucide-react';
 
 const Dashboard = () => {
-  const [showDetails, setShowDetails] = useState(false); // State to toggle ID and UID visibility
+  const [showDetails, setShowDetails] = useState(false);
 
   return (
-    <Layout style={{ backgroundImage: `url(${bg})` }}>
-      <div className="flex flex-col gap-6 p-4 md:p-6 lg:p-8 mb-4 px-4 md:px-8 lg:px-16 pt-8 lg:pt-30 bg-white">
+    <Layout>
+      <div className="flex flex-col gap-6 p-4 md:p-6 lg:p-8 mb-4 px-4 md:px-8 lg:px-16 pt-8 lg:pt-30 bg-white text-black">
         {/* Wallet Section */}
-        <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-xl shadow-sm overflow-hidden">
+        <div className="bg-blue-100 rounded-xl shadow-sm overflow-hidden">
           <div className="flex flex-col md:flex-row">
             {/* Left Side - Profile */}
             <div className="w-full md:w-2/5 p-4 md:p-6 flex flex-col items-center justify-center border-r border-gray-100">

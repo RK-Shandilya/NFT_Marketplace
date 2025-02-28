@@ -17,7 +17,7 @@ const Wallet = () => {
       <h1 className="text-2xl lg:text-3xl font-semibold mb-4 px-16 pt-30">
         Wallet
       </h1>
-      <div className="flex flex-col md:flex-row gap-4 bg-white mx-auto p-10">
+      <div className="flex flex-col md:flex-row gap-4 bg-white text-black mx-auto p-10">
         <div className="max-w-5xl mx-auto p-4 ">
           {/* Assets Header */}
           <div className="mb-6">
@@ -285,7 +285,7 @@ const Wallet = () => {
 
           {/* Fiat Deposit Button */}
           <div className="mb-8">
-            <button className="w-full py-3 px-6 text-center text-white font-medium rounded-lg bg-gradient-to-r from-blue-300 to-pink-100">
+            <button className="w-full py-3 px-6 text-center text-white font-medium rounded-lg bg-blue-900">
               Deposit in fiat currency
             </button>
           </div>

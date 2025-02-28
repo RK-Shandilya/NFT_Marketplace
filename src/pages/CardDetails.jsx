@@ -35,10 +35,9 @@ const CardDetails = () => {
   const numericId = parseInt(id, 10);
 
   return (
-    <Layout style={{ backgroundImage: `url(${bg})` }}>
+    <Layout className="bg-blue-900">
       <div className="mt-20 bg-white">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 max-w-5xl p-6 rounded-lg shadow-lg mx-auto">
-          {/* NFT Details Section */}
           <div className="flex flex-col gap-4 w-full lg:w-1/3">
             <h2 className="text-xl lg:text-2xl font-bold">{nftData.name}</h2>
             <p className="text-gray-600 text-sm lg:text-base">
@@ -84,7 +83,7 @@ const CardDetails = () => {
               alt="NFT"
               className="rounded-lg shadow-lg w-full"
             />
-            <button className="rounded-xl mx-auto w-fit mt-2 text-sm bg-gradient-to-r from-[rgba(153,188,237)] via-[rgba(153,248,207)] to-[rgba(255,214,199)] text-gray-500 hover:text-gray-900 p-3 px-9 cursor-pointer">
+            <button className="rounded-xl mx-auto w-fit mt-2 text-sm bg-blue-900 text-white hover:bg-blue-700 p-3 px-9 cursor-pointer">
               Buy Now
             </button>
           </div>

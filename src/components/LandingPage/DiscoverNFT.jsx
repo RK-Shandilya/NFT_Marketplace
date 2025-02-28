@@ -37,7 +37,7 @@ const DiscoverNFTs = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto p-4 sm:p-6 md:p-8 lg:p-10 xl:p-14">
+    <div className="max-w-7xl mx-auto p-4 sm:p-6 md:p-8 lg:p-10 xl:p-14 text-white">
       <div className="flex flex-col sm:flex-row justify-between items-start mb-6 sm:mb-8 gap-4 sm:gap-8">
         <h1 className="text-2xl sm:text-3xl font-bold">DISCOVER MORE NFTS</h1>
 
@@ -50,14 +50,14 @@ const DiscoverNFTs = () => {
                 className={`px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm ${
                   currentIndex === index
                     ? "bg-blue-500 text-white"
-                    : "bg-gray-100"
+                    : "bg-gray-100 text-black"
                 } hover:bg-gray-200 transition-all`}
               >
                 {category}
               </button>
             ))}
           </div>
-          <button className="px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm bg-gray-100 hover:bg-gray-200 transition-all">
+          <button className="px-3 text-black sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm bg-gray-100 hover:bg-gray-200 transition-all">
             All Filters
           </button>
         </div>
@@ -112,7 +112,7 @@ const DiscoverNFTs = () => {
       </div>
 
       <div className="w-full mt-6 sm:mt-8 flex justify-center">
-        <button className="p-2 sm:p-3 px-4 sm:px-6 rounded-full bg-gradient-to-r from-[rgba(153,188,255)] via-[rgba(153,255,250)] to-[rgba(255,214,199)] text-xs sm:text-sm md:text-base font-semibold text-black hover:opacity-90 transition-opacity">
+        <button className="p-2 sm:p-3 px-4 sm:px-6 rounded-full bg-white text-xs sm:text-sm md:text-base font-semibold text-black hover:opacity-90 transition-opacity">
           Discover More
         </button>
       </div>

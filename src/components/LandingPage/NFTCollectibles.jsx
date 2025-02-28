@@ -21,7 +21,7 @@ const FeaturedNFTs = () => {
             Earning income in JEONFT is simple: just RESERVE and then
             TRADE to EARN
           </p>
-          <button className="mt-4 px-6 py-2 rounded-full bg-linear-90 from-[rgba(153,188,255)] via-[rgba(153,255,250)] to-[rgba(255,214,199)] text-sm md:text-base font-semibold text-white">
+          <button className="mt-4 px-6 py-2 rounded-full bg-blue-900 text-sm md:text-base font-semibold text-white">
             SIGN UP NOW
           </button>
         </div>

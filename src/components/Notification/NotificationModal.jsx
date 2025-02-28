@@ -42,7 +42,7 @@ const NotificationModal = ({ onClose }) => {
         {/* Button */}
         <div className="mt-6 flex justify-center">
           <button
-            className="px-6 py-2 rounded-full bg-gradient-to-r from-blue-400 to-green-400 text-white font-medium shadow-md transition hover:scale-105"
+            className="px-6 py-2 rounded-full bg-blue-900 text-white font-medium shadow-md transition hover:scale-105"
             onClick={onClose}
           >
             GO →

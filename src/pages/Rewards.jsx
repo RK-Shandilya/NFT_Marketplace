@@ -32,8 +32,8 @@ const LevelUpReward = () => {
   const [selectedLevel, setSelectedLevel] = useState(levels[0]);
 
   return (
-    <Layout style={{ background: "white" }}>
-      <div className="w-full min-h-screen bg-black text-white mt-20">
+    <Layout>
+      <div className="w-full min-h-screen bg-black text-white mt-18">
         {/* Tabs */}
         <div className="flex border-b border-gray-800 pt-4 md:pt-8 px-4 md:px-8">
           <button

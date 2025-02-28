@@ -38,7 +38,7 @@ const StakeCard = ({ data, onStakeClick }) => {
 
       {/* Button */}
       <button 
-        className="mt-4 w-full py-2 bg-gradient-to-r from-blue-300 to-green-300 text-gray-700 rounded-lg font-semibold"
+        className="mt-4 w-full py-2 bg-blue-700 text-white rounded-lg font-semibold"
         onClick={() => onStakeClick(data)}
       >
         Go to stake

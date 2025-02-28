@@ -42,7 +42,7 @@ const Explore = () => {
   };
 
   return (
-    <Layout style={{ backgroundImage: `url(${bg})` }}>
+    <Layout >
       <div className="mx-auto bg-cover bg-center bg-no-repeat">
         {/* Header */}
         <h1 className="text-2xl lg:text-3xl font-semibold mb-4 px-16 pt-30">
@@ -57,7 +57,7 @@ const Explore = () => {
                 <span
                   className={`p-2 cursor-pointer whitespace-nowrap ${
                     activeTab === "Stake"
-                      ? "text-black font-semibold border-gradient"
+                      ? "text-black font-semibold border-b-6 border-blue-900"
                       : ""
                   }`}
                   onClick={() => handleTabClick("Stake")}
@@ -67,7 +67,7 @@ const Explore = () => {
                 <span
                   className={`p-2 cursor-pointer whitespace-nowrap ${
                     activeTab === "Polygon NFT"
-                      ? "text-black font-semibold border-gradient"
+                      ? "text-black font-semibold border-b-6 border-blue-900"
                       : ""
                   }`}
                   onClick={() => handleTabClick("Polygon NFT")}
@@ -77,7 +77,7 @@ const Explore = () => {
                 <span
                   className={`p-2 cursor-pointer whitespace-nowrap ${
                     activeTab === "Art"
-                      ? "text-black font-semibold border-gradient"
+                      ? "text-black font-semibold border-b-6 border-blue-900"
                       : ""
                   }`}
                   onClick={() => handleTabClick("Art")}
@@ -87,7 +87,7 @@ const Explore = () => {
                 <span
                   className={`p-2 cursor-pointer whitespace-nowrap ${
                     activeTab === "Collectibles"
-                      ? "text-black font-semibold border-gradient"
+                      ? "text-black font-semibold border-b-6 border-blue-900"
                       : ""
                   }`}
                   onClick={() => handleTabClick("Collectibles")}
@@ -102,7 +102,7 @@ const Explore = () => {
                   <span
                     className={`p-2 cursor-pointer whitespace-nowrap ${
                       activeSubTab === "Stake"
-                        ? "text-black font-semibold border-b-2 border-gradient2"
+                        ? "text-black font-semibold border-b-3 border-blue-900"
                         : ""
                     }`}
                     onClick={() => handleSubTabClick("Stake")}
@@ -112,7 +112,7 @@ const Explore = () => {
                   <span
                     className={`p-2 cursor-pointer whitespace-nowrap ${
                       activeSubTab === "Collection"
-                        ? "text-black font-semibold border-b-2 border-gradient2"
+                        ? "text-black font-semibold border-b-2 border-b-3 border-blue-900"
                         : ""
                     }`}
                     onClick={() => handleSubTabClick("Collection")}
@@ -122,7 +122,7 @@ const Explore = () => {
                   <span
                     className={`p-2 cursor-pointer whitespace-nowrap ${
                       activeSubTab === "My Stake"
-                        ? "text-black font-semibold border-b-2 border-gradient2"
+                        ? "text-black font-semibold border-b-2 border-b-3 border-blue-900"
                         : ""
                     }`}
                     onClick={() => handleSubTabClick("My Stake")}
@@ -134,10 +134,10 @@ const Explore = () => {
 
               {/* Zones */}
               {activeTab === "Stake" && activeSubTab === "Stake" && (
-                <div className="flex gap-4 lg:gap-6 mb-4 p-3">
+                <div className="flex gap-4 lg:gap-6 mb-4 p-3 text-blue-900">
                   <span
                     className={`font-semibold pb-2 cursor-pointer whitespace-nowrap ${
-                      activeZone === "Exclusive" ? "border-b-2 border-black" : ""
+                      activeZone === "Exclusive" ? "border-b-2 border-blue-900" : ""
                     }`}
                     onClick={() => setActiveZone("Exclusive")}
                   >
@@ -145,7 +145,7 @@ const Explore = () => {
                   </span>
                   <span
                     className={`cursor-pointer whitespace-nowrap ${
-                      activeZone === "Free" ? "border-b-2 border-black" : ""
+                      activeZone === "Free" ? "border-b-2 border-blue-900" : ""
                     }`}
                     onClick={() => setActiveZone("Free")}
                   >

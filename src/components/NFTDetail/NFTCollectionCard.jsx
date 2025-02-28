@@ -18,7 +18,7 @@ const NFTCollectionCard = ({ data }) => {
   };
 
   return (
-    <div className="w-full mx-auto bg-white shadow-lg rounded-xl overflow-hidden py-8 mt-14">
+    <div className="w-full mx-auto bg-white shadow-lg rounded-xl overflow-hidden py-8 mt-10 text-black">
       {/* Banner */}
       <div className="relative w-full h-40 sm:h-60">
         <img src={image} alt={title} className="w-full h-full object-cover" />
@@ -119,7 +119,7 @@ const NFTCollectionCard = ({ data }) => {
           <option value="price">Price</option>
           <option value="theme">Theme</option>
         </select>
-        <button className="w-full sm:w-fit p-2 rounded-full bg-gradient-to-r from-[rgba(153,188,237)] via-[rgba(153,248,207)] to-[rgba(255,214,199)]">
+        <button className="w-full sm:w-fit p-2 rounded-full bg-blue-900">
           <BiSort className="w-6 h-6 text-white" />
         </button>
         </div>

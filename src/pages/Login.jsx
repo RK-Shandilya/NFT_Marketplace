@@ -17,8 +17,7 @@ const TreasureNFTLoginModal = ({ onClose }) => {
     <div className="fixed inset-0 flex items-center justify-center bg-black/30 z-100">
       <div className="bg-white rounded-2xl shadow-lg w-full max-w-md mx-4">
         <div
-          className="flex flex-col items-center mb-8 rounded-t-2xl bg-cover bg-center bg-no-repeat pb-8"
-          style={{ backgroundImage: `url(${bg})` }}
+          className="flex flex-col items-center mb-8 rounded-t-2xl pb-8 bg-blue-900"
         >
           <div className="w-28 h-28 flex items-center justify-center mb-4">
             <div className="relative">
@@ -28,17 +27,17 @@ const TreasureNFTLoginModal = ({ onClose }) => {
             </div>
           </div>
 
-          <div className="text-gray-800 font-bold text-3xl flex items-center">
-            JEO <span className="text-gray-700 ml-2">NFT</span>
+          <div className="text-white font-bold text-3xl flex items-center">
+            JEO <span className="text-white ml-2">NFT</span>
           </div>
         </div>
 
         <div className="p-6">
-          <h1 className="text-2xl font-bold text-center mb-6">Log in</h1>
+          <h1 className="text-2xl text-blue-900 font-bold text-center mb-6">Log in</h1>
 
           <div className="mb-6">
             <button
-              className="w-full border-2 border-cyan-400 rounded-lg p-3 flex items-center justify-center text-gray-600 hover:bg-gray-50"
+              className="w-full border-2 border-blue-900 rounded-lg p-3 flex items-center justify-center text-gray-600 hover:bg-gray-50"
               onClick={() => alert("Wallet Connect clicked!")}
             >
               Wallet Connect &gt;
@@ -98,7 +97,7 @@ const TreasureNFTLoginModal = ({ onClose }) => {
 
           <div className="flex justify-end mb-6">
             <button
-              className="text-blue-400 text-sm hover:underline"
+              className="text-blue-900 text-sm hover:underline"
               onClick={() => alert("Forgot Password clicked!")}
             >
               Forgot Password?
@@ -113,7 +112,7 @@ const TreasureNFTLoginModal = ({ onClose }) => {
               Cancel
             </button>
             <button
-              className="w-1/2 bg-gradient-to-r from-blue-300 to-cyan-300 rounded-lg py-2 text-white font-medium hover:opacity-90"
+              className="w-1/2 bg-blue-900 rounded-lg py-2 text-white font-medium hover:opacity-90"
               onClick={handleConfirm}
             >
               Confirm
@@ -123,7 +122,7 @@ const TreasureNFTLoginModal = ({ onClose }) => {
           <div className="text-center">
             <span className="text-gray-600">Don't have an account? </span>
             <button
-              className="text-blue-400 hover:underline"
+              className="text-blue-900 hover:underline"
               onClick={() => alert("Sign up clicked!")}
             >
               Sign up

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { RefreshCw } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { nav } from 'framer-motion/client';
+import { nft5 } from '../../assets/landingPage/discover_nft';
 
 const NFTCard = ({ nft }) => {
   const [loaded, setLoaded] = useState(false);
@@ -13,7 +14,7 @@ const NFTCard = ({ nft }) => {
     >
       <div className="relative w-fit aspect-square overflow-hidden">
         <img
-          src={nft.image || "/api/placeholder/400/400"} 
+          src={nft.image || nft5} 
           alt={nft.title}
           className={`w-50 rounded-2xl h-50 object-cover transition-opacity duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}
           onLoad={() => setLoaded(true)}
