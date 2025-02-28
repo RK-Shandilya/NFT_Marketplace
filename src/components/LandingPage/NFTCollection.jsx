@@ -59,7 +59,7 @@ const NFTMarketplace = () => {
   ];
 
   return (
-    <div className="container mx-auto p-4 sm:p-6 md:p-10">
+    <div className="container mx-auto p-4 sm:p-6 md:p-10 text-black">
       <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 sm:gap-6">
         {/* Main NFT Display */}
         <div className="sm:col-span-12 md:col-span-5">

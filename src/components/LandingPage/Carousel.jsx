@@ -67,7 +67,7 @@ const StakingNFTCarousel = () => {
   };
 
   return (
-    <div className="mt-14">
+    <div className="mt-14 bg-white">
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="relative">
           <Slider ref={sliderRef} {...settings} className="h-[40vh] sm:h-[50vh] md:h-[78vh]">

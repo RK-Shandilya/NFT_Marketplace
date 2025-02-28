@@ -25,12 +25,12 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "backdrop-blur-md bg-white/70 shadow-md"
-          : "bg-transparent"
+          ? "backdrop-blur-md bg-white/60 shadow-md text-black"
+          : "bg-blue-900"
       }`}>
       <div className="flex justify-between items-center px-4 md:px-6 py-4">
         <div onClick={()=> navigate('/')}>
-          <img src={logo} alt="Logo" className="w-24 bg-gray-950 rounded-2xl" />
+          <img src={logo} alt="Logo" className="w-24 rounded-2xl bg-blue-900" />
         </div>
 
         <button
@@ -84,31 +84,31 @@ const Navbar = () => {
               <AlignJustify className="w-8 h-8" />
             </button>
             {dropdownOpen && (
-              <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg">
+              <div className="absolute right-0 mt-2 w-48 bg-white text-black shadow-lg rounded-lg">
                 <div className="p-2 space-y-2">
-                  <button className="flex items-center gap-2 p-2 hover:bg-gray-100 w-full cursor-pointer">
+                  <button className="flex items-center gap-2 p-2 hover:bg-gray-100 w-full cursor-pointer rounded-lg">
                     <Headset className="w-6" />
                     Service
                   </button>
-                  <button className="flex items-center gap-2 p-2 hover:bg-gray-100 w-full cursor-pointer"
+                  <button className="flex items-center gap-2 p-2 hover:bg-gray-100 w-full cursor-pointer rounded-lg"
                   onClick={() => navigate('/user')}
                   >
                     <img src={account} alt="Account" className="w-6" />
                     Account
                   </button>
-                  <button className="flex items-center gap-2 p-2 hover:bg-gray-100 w-full cursor-pointer"
+                  <button className="flex items-center gap-2 p-2 hover:bg-gray-100 w-full cursor-pointer rounded-lg"
                   onClick={()=> navigate('/wallet')}
                   >
                     <Wallet className="w-6" />
                     Wallet
                   </button>
-                  <button className="flex items-center gap-2 p-2 hover:bg-gray-100 w-full cursor-pointer"
+                  <button className="flex items-center gap-2 p-2 hover:bg-gray-100 w-full cursor-pointer rounded-lg"
                   onClick={()=> navigate('/message')}
                   >
                     <Mail className="w-6" />
                     Message
                   </button>
-                  <button className="flex items-center gap-2 p-2 hover:bg-gray-100 w-full">
+                  <button className="flex items-center gap-2 p-2 hover:bg-gray-100 w-full rounded-lg">
                     <FileKey className="w-6" />
                     Security TAP
                   </button>
@@ -119,7 +119,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Icons */}
-        <div className="md:hidden flex items-center gap-4">
+        <div className="md:hidden flex items-center gap-4" >
           <div className="relative cursor-pointer">
             <Bell className="w-6 h-6" />
             <span className="absolute top-0 right-0 bg-red-500 w-2 h-2 rounded-full"></span>

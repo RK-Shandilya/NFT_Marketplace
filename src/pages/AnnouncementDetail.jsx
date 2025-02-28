@@ -32,7 +32,7 @@ const AnnouncementDetail = () => {
         <h1 className="text-2xl lg:text-3xl font-semibold mb-4 px-16 pt-30">
           Announcement
         </h1>
-      <div className="bg-white py-10">
+      <div className="bg-white py-10 text-black">
         <div className="flex flex-col gap-4 w-2/3 mx-auto justify-center items-center">
           <div className="text-center flex flex-col gap-4">
             <h1 className="text-2xl font-light">{data[id].title}</h1>

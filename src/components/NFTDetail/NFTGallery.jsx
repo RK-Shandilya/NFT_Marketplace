@@ -60,7 +60,7 @@ const NFTGallery = ({ nft }) => {
   };
 
   return (
-    <div className="w-full max-w-6xl mx-auto p-4">
+    <div className="w-full max-w-6xl mx-auto p-4 text-black">
       <h2 className="text-xl sm:text-2xl font-bold mb-6">NFT Collection</h2>
 
       {/* NFT Grid with Animation */}

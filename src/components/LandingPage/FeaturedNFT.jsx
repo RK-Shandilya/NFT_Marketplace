@@ -11,9 +11,9 @@ const FeaturedNFT = () => {
 
   return (
     <div>
-      <div className="bg-gradient-to-r from-[rgba(153,188,237,.2)] via-[rgba(153,248,207,.5)] to-[rgba(255,214,199,.5)] px-4 sm:px-8 md:px-20 py-10 sm:py-14">
+      <div className="bg-blue-900 px-4 sm:px-8 md:px-20 py-10 sm:py-14">
         {/* Heading */}
-        <div className="text-xl sm:text-2xl md:text-3xl font-bold text-black uppercase mb-6 text-center sm:text-left">
+        <div className="text-xl sm:text-2xl md:text-3xl font-bold  uppercase mb-6 text-center sm:text-left">
           FEATURED NFT COLLECTIBLES
         </div>
 

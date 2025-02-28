@@ -33,7 +33,6 @@ function App() {
         <Route path='/user' element={<Dashboard/>}/>
         <Route path='/message' element={<Message/>}/>
         <Route path='/wallet' element={<Wallet/>}></Route>
-        {/* <Route path='/login' element={<LoginModal/>}></Route> */}
       </Routes>
     </Router>
   )

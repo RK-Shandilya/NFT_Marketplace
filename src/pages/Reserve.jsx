@@ -36,7 +36,7 @@ const Reserve = () => {
       <div className="mx-auto">
         {/* Header */}
         <div className="mb-4 px-4 lg:px-16 pt-25">
-          <h1 className="text-4xl font-bold text-black">Reserve</h1>
+          <h1 className="text-4xl font-bold ">Reserve</h1>
         </div>
 
         {/* Main Grid */}

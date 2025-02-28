@@ -10,7 +10,7 @@ const NftDetail = () => {
     const {id} = useParams();
     const numericId = parseInt(id, 10);
   return (
-    <Layout  style={{ backgroundImage: `url(${bg})` }}>
+    <Layout>
         {
             polygonNFTData.map((data) => {
                 if(data.id === numericId){

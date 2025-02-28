@@ -2,9 +2,9 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
-const Layout = ({children, style}) => {
+const Layout = ({children}) => {
   return (
-    <div style={style} className='play-regular'>
+    <div className='play-regular bg-blue-900 text-white'>
       <Navbar/>
       {children}
       <Footer/>

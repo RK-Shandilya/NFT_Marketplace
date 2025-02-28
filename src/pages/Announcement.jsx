@@ -1,7 +1,6 @@
 import React from "react";
 import SingleAnnouncement from "../components/Announcement/SingleAnnouncement";
 import Layout from "../Layout";
-import { bg } from "../assets/Explore";
 import A1 from '../assets/Announcement/A1.avif'
 import A2 from '../assets/Announcement/A2.avif'
 
@@ -24,13 +23,13 @@ const announcements = [
 
 const Announcements = () => {
   return (
-    <Layout style={{ backgroundImage: `url(${bg})` }}>
-      <div className="mx-auto">
+    <Layout>
+      <div className="mx-auto bg-blue-900">
         <h1 className="text-2xl lg:text-3xl font-semibold mb-4 px-16 pt-30">
           Announcement
         </h1>
        <div className="bg-white w-full p-4 lg:p-14">
-          <h2 className="text-xl font-semibold mt-4">Notification List</h2>
+          <h2 className="text-xl text-black font-semibold mt-4">Notification List</h2>
           <div className="mt-4 space-y-4">
             {announcements.map((announcement) => (
               <SingleAnnouncement key={announcement.id} data={announcement} />

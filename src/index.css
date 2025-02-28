@@ -19,12 +19,12 @@
 
 .border-gradient {
   border-bottom-width: 8px;
-  border-image: linear-gradient(90deg, rgba(153,188,237), rgba(153,248,207), rgba(255,214,199)) 1;
+  border-image: rgb(0, 0, 255);
 }
 
 .border-gradient2 {
   border-bottom-width: 4px;
-  border-image: linear-gradient(90deg, rgba(153,188,237), rgba(153,248,207), rgba(255,214,199)) 1;
+  border-image: rgb(0, 0, 255);
 }
 
 *{
